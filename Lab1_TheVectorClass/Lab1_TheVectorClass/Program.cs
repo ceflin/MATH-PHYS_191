@@ -40,14 +40,14 @@ namespace Lab1_TheVectorClass
             Console.WriteLine(vector1X + "," + vector1Y + "," + vector1Z);
             Console.WriteLine();
 
-            Console.WriteLine("Magnitude: " + mag1);
+            vector1.printMag(mag1);
 
             Console.WriteLine();
             Console.WriteLine("Second vector:");
             Console.WriteLine(vector2X + "," + vector2Y + "," + vector2Z);
             Console.WriteLine("");
 
-            Console.WriteLine("Magnitude: " + mag2);
+            vector2.printMag(mag2);
 
             Console.WriteLine();
             Console.WriteLine("The sum of the 2 vectors is: ");

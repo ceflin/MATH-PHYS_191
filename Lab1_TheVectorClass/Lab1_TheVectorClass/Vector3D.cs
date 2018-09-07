@@ -74,5 +74,10 @@ namespace Lab1_TheVectorClass
             Console.WriteLine("z: " + z);
 
         }
+
+        public void printMag(float mag)
+        {
+            Console.WriteLine("Magnitude: {0:F}", mag);
+        }
     }
 }
