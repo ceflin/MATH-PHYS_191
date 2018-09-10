@@ -54,6 +54,23 @@ namespace Lab1_TheVectorClass
             Vector3D vectorSum = vector1 + vector2;
             vectorSum.printRect();
 
+            Console.WriteLine();
+            Console.WriteLine("The difference of the 2 vectors is: ");
+            Vector3D vectorDiff = vector1 - vector2;
+            vectorDiff.printRect();
+
+            Console.WriteLine();
+            Console.Write("Enter a scalar: ");
+            float scalar = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine();
+            Console.WriteLine("The product of the 1st vector is: ");
+            Vector3D vectorProd = vector1 * scalar;
+            vectorProd.printRect();
+
+            Console.WriteLine();
+
+
 
         }
     }
