@@ -70,7 +70,14 @@ namespace Lab1_TheVectorClass
 
             Console.WriteLine();
 
-
+            Console.Write("Enter the angle of the pole: ");
+            float angle = Convert.ToSingle(Console.ReadLine());
+            Console.Write("Enter the distance: ");
+            float dist = Convert.ToSingle(Console.ReadLine());
+            Console.Write("Enter the heading: ");
+            float head = Convert.ToSingle(Console.ReadLine());
+            Console.Write("Enter the pitch: ");
+            float pitch = Convert.ToSingle(Console.ReadLine());
 
         }
     }
