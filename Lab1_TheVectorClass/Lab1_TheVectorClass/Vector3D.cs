@@ -88,7 +88,7 @@ namespace Lab1_TheVectorClass
             //Console.WriteLine("x: " + x);
             //Console.WriteLine("y: " + y);
             //Console.WriteLine("z: " + z);
-            Console.WriteLine("{0}, {1}, {2}", x, y, z);
+            Console.WriteLine($"{getX(x)}, {getY(y)}, {getZ(z)}");
         }
 
         public void printMag(float mag)
@@ -98,65 +98,142 @@ namespace Lab1_TheVectorClass
 
         public float getMag(float mag)
         {
-            return mag;
+            return mag; ///edit
+        }
+
+        //Converts radians to degrees and vice versa.
+        public float radsToDeg(float rad)
+        {
+            float degrees = rad * (180 / (float)Math.PI);
+            return degrees;
+        }
+        public float degToRads(float degrees)
+        {
+            float rads = degrees * ((float)Math.PI / 180);
+            return rads;
         }
 
         // Sets the rect given the magnitude and the angle of a vector (2D)
-        public void setRectGivenPolar (float mag, float angle)
+        public void setRectGivenPolar (float mag, float head)
         {
-            x = mag * (float)Math.Cos(angle);
-            y = mag * (float)Math.Sin(angle);
+            head = degToRads(head);
+            x = mag * (float)Math.Cos(head);
+            y = mag * (float)Math.Sin(head);
         }
 
+        // Sets the rect given magnitude, heading, and pitch
         public void setRectGivenMagHeadPitch (float mag, float head, float pitch)
         {
+            head = degToRads(head);
+            pitch = degToRads(pitch);
             x = mag * (float)Math.Cos(pitch) * (float)Math.Cos(head);
             y = mag * (float)Math.Cos(pitch) * (float)Math.Sin(head);
             z = mag * (float)Math.Sin(pitch);
         }
 
+        // Output = the magnitude and heading of the vector.
         public void printPolar(float mag, float angle)
         {
-            Console.WriteLine("Magnitude: {0}", mag);
-            Console.WriteLine("Angle: {0}", angle);
+            Console.WriteLine($"Magnitude: {getMag(mag)}");
+            Console.WriteLine($"Angle: {angle}");
         }
 
-        public void printMagHeadPitch(float mag, float head, float pitch)
+        // Output = the magnitude, heading, and pitch of the vector.
+        public void printMagHeadPitch(float M, float H, float P)
         {
-            Console.WriteLine("Magnitude: {0}", mag);
-            Console.WriteLine("Heading: {0}", head);
-            Console.WriteLine("Pitch: {0}", pitch);
+            float mag = getMag(M);
+            float head = getHeading(M, P, H);
+            float pitch = getPitch(M, P);
+
+            //Convert from rad to degree
+            head = radsToDeg(head);
+            pitch = radsToDeg(pitch);
+
+            //Print mag, head, pitch
+            Console.WriteLine($"Magnitude: {mag}");
+            Console.WriteLine($"Heading: {head}");
+            Console.WriteLine($"Pitch: {pitch}");
         }
 
-        public void printDirection(float alpha, float beta, float gama)
+        public void printDirection(float mag, Vector3D alpha, Vector3D beta, Vector3D gama)
         {
             Console.WriteLine("Direction angles:");
-            Console.WriteLine("Alpha: {0}", alpha);
-            Console.WriteLine("Beta: {0}", beta);
-            Console.WriteLine("Gama: {0}", gama);
+            Console.WriteLine($"Alpha: {getAlpha(alpha, mag)}");
+            Console.WriteLine($"Beta: {getBeta(beta, mag)}");
+            Console.WriteLine($"Gama: {getGama(gama, mag)}");
         }
 
-        public float getPitch(float pitch)
+        public float getPitch(float M, float P)
         {
+            float pitch = (float)Math.Asin((M * (float)Math.Sin(P) / M));
+
+            if (M == 0)
+                return 0;
+
             return pitch;
         }
 
-        public float getHeading(float head)
+        public float getHeading(float M, float P, float H)
         {
+            float vX = M * (float)Math.Cos(P) * (float)Math.Cos(H);
+            float vY = M * (float)Math.Cos(P) * (float)Math.Sin(H);
+            float head = (float)Math.Acos(vX / (float)(Math.Sqrt(Math.Pow(vX, 2) + Math.Pow(vY, 2))));
+
             return head;
         }
 
+        // Returns alpha, beta, and gama if mag != 0
         public float getAlpha(Vector3D vector, float mag)
         {
+            
+            if (mag == 0)
+                return vector.x = 0;
+
             return (float)Math.Acos(vector.x / mag);
         }
         public float getBeta(Vector3D vector, float mag)
         {
+            if (mag == 0)
+                return vector.y = 0;
+
             return (float)Math.Acos(vector.y / mag);
         }
         public float getGama(Vector3D vector, float mag)
         {
+            if (mag == 0)
+                return vector.z = 0;
+
             return (float)Math.Acos(vector.z / mag);
         }
+
+        // Calculates the dot product of the 2 vectors U and V.
+        public float dotProduct(Vector3D U, Vector3D V)
+        {
+            float dProd = U.x * V.x + U.y * V.y + U.z * V.z;
+            return dProd;
+        }
+
+        // Calculates the angle between the 2 vectors U and V.
+        public float dotProdAngle(Vector3D U, Vector3D V)
+        {
+            float angle = dotProduct(U, V) / (CalcMag(U.x, U.y, U.z) * CalcMag(V.x, V.y, V.z));
+            return angle;
+        }
+        
+        //NEEDS EDIT
+        //
+        public Vector3D paraProj(Vector3D U, Vector3D V)
+        {
+            float paraX = (dotProduct(U, V) / (CalcMag(V.x, V.y, V.z) * CalcMag(V.x, V.y, V.z)) * V.x);
+            float paraY = (dotProduct(U, V) / (CalcMag(V.x, V.y, V.z) * CalcMag(V.x, V.y, V.z)) * V.y);
+            float paraZ = (dotProduct(U, V) / (CalcMag(V.x, V.y, V.z) * CalcMag(V.x, V.y, V.z)) * V.z);
+
+            return new Vector3D(paraX, paraY, paraZ);
+        }
+
+        //public Vector3D perpProj(Vector3D U, Vector3D V)
+        //{
+            
+        //}
     }
 }
