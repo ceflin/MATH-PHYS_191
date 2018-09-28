@@ -12,3 +12,10 @@ C:\Users\svc-student\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorCla
 C:\Users\svc-student\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorClass\obj\Debug\Lab1_TheVectorClass.csproj.CoreCompileInputs.cache
 C:\Users\svc-student\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorClass\obj\Debug\Lab1_TheVectorClass.exe
 C:\Users\svc-student\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorClass\obj\Debug\Lab1_TheVectorClass.pdb
+C:\Users\Owner\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorClass\bin\Debug\Lab1_TheVectorClass.exe.config
+C:\Users\Owner\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorClass\bin\Debug\Lab1_TheVectorClass.exe
+C:\Users\Owner\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorClass\bin\Debug\Lab1_TheVectorClass.pdb
+C:\Users\Owner\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorClass\obj\Debug\Lab1_TheVectorClass.csprojAssemblyReference.cache
+C:\Users\Owner\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorClass\obj\Debug\Lab1_TheVectorClass.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorClass\obj\Debug\Lab1_TheVectorClass.exe
+C:\Users\Owner\Desktop\MATH-PHYS_191\Lab1_TheVectorClass\Lab1_TheVectorClass\obj\Debug\Lab1_TheVectorClass.pdb
