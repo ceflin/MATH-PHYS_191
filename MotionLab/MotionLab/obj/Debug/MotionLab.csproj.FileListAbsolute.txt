@@ -1,0 +1,7 @@
+C:\Users\svc-student\Desktop\MATH-PHYS_191\MotionLab\MotionLab\bin\Debug\MotionLab.exe.config
+C:\Users\svc-student\Desktop\MATH-PHYS_191\MotionLab\MotionLab\bin\Debug\MotionLab.exe
+C:\Users\svc-student\Desktop\MATH-PHYS_191\MotionLab\MotionLab\bin\Debug\MotionLab.pdb
+C:\Users\svc-student\Desktop\MATH-PHYS_191\MotionLab\MotionLab\obj\Debug\MotionLab.csprojAssemblyReference.cache
+C:\Users\svc-student\Desktop\MATH-PHYS_191\MotionLab\MotionLab\obj\Debug\MotionLab.csproj.CoreCompileInputs.cache
+C:\Users\svc-student\Desktop\MATH-PHYS_191\MotionLab\MotionLab\obj\Debug\MotionLab.exe
+C:\Users\svc-student\Desktop\MATH-PHYS_191\MotionLab\MotionLab\obj\Debug\MotionLab.pdb
