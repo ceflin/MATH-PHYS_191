@@ -295,6 +295,8 @@ namespace Lab1_TheVectorClass
             }
             return matrixRow;
         }
+
+        #endregion
     }
 
 }

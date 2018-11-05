@@ -24,9 +24,9 @@ namespace ScallingAnTranslation
                 Console.Write($"Enter the points of vertex {numVertex} separated by spaces: ");
                 string vertex = Convert.ToString(Console.ReadLine());
                 string[] vertexSplit = vertex.Split(' ');
-                
 
-            }
+
+            } while (true);
         }
     }
 }
